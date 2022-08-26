@@ -1,19 +1,24 @@
 const numberOfCategories = document.querySelectorAll(".item").length;
 console.log("Number of categories:", numberOfCategories);
 
+const categories = [...document.querySelectorAll("h2")];
+const categoriesArray = categories.map(category => category.textContent);
 
-const categoriesArray = [];
-const category = [...document.querySelectorAll('h2')].forEach(item => categoriesArray.push(item.textContent));
 
-const elementsArray = [];
-const item = [...document.querySelectorAll(".item")].forEach(item => elementsArray.push(item.lastElementChild.children.length));
+const elements = [...document.querySelectorAll(".item")];
+const elementsArray = elements.map(element => element.lastElementChild.children.length);
 
-console.log("Category:", categoriesArray[0]);
-console.log("Elements:", elementsArray[0]);
-console.log("Category:", categoriesArray[1]);
-console.log("Elements:", elementsArray[1]);
-console.log("Category:", categoriesArray[2]);
-console.log("Elements:", elementsArray[2]);
+function getCategory(categoriesArray, elementsArray) {
+
+	for (let i = 0; i < categoriesArray.length; i += 1) {
+		console.log("Category:", categoriesArray[i]);
+		console.log("Elements:", elementsArray[i]);
+	}
+}
+
+getCategory(categoriesArray, elementsArray);
+
+
 
 
 

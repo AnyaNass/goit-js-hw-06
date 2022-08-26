@@ -17,11 +17,16 @@ function onInput() {
 
 	createBtn.addEventListener('click', onClick);
 
+
+
 	function onClick() {
 		console.log('click');
-		const marcup = `<div>Box</div>`;
+		const marcup = `<div style="height: 30px; width: 30px;">Box</div>`;
 		boxes.insertAdjacentHTML("afterbegin", marcup);
-
 	}
 }
+
+// получили число
+// сделали массив из него с фором наверное 
+// релюсом добавили лиы
 
