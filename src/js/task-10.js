@@ -10,11 +10,11 @@ const boxes = document.querySelector('#boxes')
 
 createBtn.addEventListener('click', createBoxes)
 
+let width = 20;
+let heigh = 20;
+
 function createBoxes() {
 	const amount = Number(number.value);
-
-	let width = 20;
-	let heigh = 20;
 
 	function getWidth() {
 		for (let i = 0; i <= amount; i += 1) {
